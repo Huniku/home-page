@@ -1,35 +1,29 @@
 (function(){
 
   angular
-       .module('users')
-       .controller('UserController', [
-          'userService', '$mdSidenav', '$mdBottomSheet', '$log', '$q',
-          UserController
+       .module('homePage')
+       .controller('HomePageController', [
+          'workExperienceService', '$mdBottomSheet', '$log', '$q',
+          HomePageController
        ]);
 
   /**
    * Main Controller for the Angular Material Starter App
    * @param $scope
-   * @param $mdSidenav
    * @param avatarsService
    * @constructor
    */
-  function UserController( userService, $mdSidenav, $mdBottomSheet, $log, $q) {
+  function HomePageController( workExperienceService, $mdBottomSheet, $log, $q) {
     var self = this;
-
-    self.selected     = null;
-    self.users        = [ ];
-    self.selectUser   = selectUser;
-    self.toggleList   = toggleUsersList;
-    self.showContactOptions  = showContactOptions;
-
+    var workExp = [];
+    
+    console.log("HomePageController");
     // Load all registered users
 
-    userService
-          .loadAllUsers()
-          .then( function( users ) {
-            self.users    = [].concat(users);
-            self.selected = users[0];
+    workExperienceService
+          .loadAllWorkExperience()
+          .then( function( work ) {
+            self.workExp    = [].concat(work);
           });
 
     // *********************************

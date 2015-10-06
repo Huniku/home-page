@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en" >
   <head>
-    <title>Angular Material - Starter App</title>
+    <title>Ben White</title>
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
 
-    <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Roboto:400,500,700,400italic'>
+    <!--<link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Roboto:400,500,700,400italic'>-->
     <link rel="stylesheet" href="./bower_components/angular-material/angular-material.css"/>
     <link rel="stylesheet" href="assets/app.css"/>
 
@@ -23,63 +23,54 @@
 
   </head>
 
-  <body ng-app="starterApp" layout="row" ng-controller="UserController as ul" ng-cloak >
+  <body ng-app="starterApp" ng-controller="HomePageController as ul" ng-cloak >
 
-  <md-sidenav class="site-sidenav md-sidenav-left md-whiteframe-z2"
-                md-component-id="left"
-                md-is-locked-open="$mdMedia('gt-sm')">
-
-    <md-toolbar class="md-whiteframe-z1">
-      <h1>Users</h1>
-    </md-toolbar>
-
-    <md-list>
-      <md-list-item ng-repeat="it in ul.users">
-          <md-button ng-click="ul.selectUser(it)" ng-class="{'selected' : it === ul.selected }">
-            <md-icon md-svg-icon="{{it.avatar}}" class="avatar"></md-icon>
-            {{it.name}}
-          </md-button>
-      </md-list-item>
-    </md-list>
-
-  </md-sidenav>
-
-
-  <div flex layout="column" tabIndex="-1" role="main" class="md-whiteframe-z2">
+  <md-content flex layout="column" tabIndex="-1" role="main">
 
     <md-toolbar layout="row" class="md-whiteframe-z1">
-      <md-button class="menu" hide-gt-sm ng-click="ul.toggleList()" aria-label="Show User List">
-        <md-icon md-svg-icon="menu" ></md-icon>
-      </md-button>
-      <h1>Angular Material - Starter App</h1>
+      <h1>Ben White</h1>
     </md-toolbar>
 
     <md-content flex id="content">
-        <md-icon md-svg-icon="{{ul.selected.avatar}}" class="avatar"></md-icon>
-        <h2>{{ul.selected.name}}</h2>
-        <p>{{ul.selected.content}}</p>
+      <md-list>
+        <md-list-item ng-repeat="itr in ul.workExp">
+          <md-whiteframe class="md-whiteframe-2dp" flex="20" layout="column" layout-align="left center" style="margin:30px; height:80px">
+            <span style="display: block; background-color: rgb(33, 150, 243); color:white; font-weight: 700; line-height: 36px; text-align: center;" flex="40">{{itr.startDate}} - {{itr.endDate}}</span>
+            <span style="display: block; font-size: 15px; font-weight: 500; line-height: 50px; text-align: center;" flex>{{itr.company}}</span>
+          </md-whiteframe>
+          <md-icon md-svg-icon="{{itr.icon}}" class="avatar"></md-icon>
+          <md-whiteframe class="md-whiteframe-2dp" flex="50" layout="column" layout-align="right center" style="margin:30px; padding: 16px 0;">
+            <h3 style="margin: 0 16px">{{itr.position}}</h3>
+            <ul style="margin:0;">
+              <md-list style="padding:0;">
+                <md-list-item ng-repeat="element in itr.description">
+                  <li>
+                    <span>{{element.text}}</span>
+                  </li>
+                </md-list-item>
+              </md-list>
+            </ul>
+          </md-whiteframe>
+          
+        </md-list-item>
+      </md-list
+    </md-content>
 
-        <md-button class="contact" md-no-ink ng-click="ul.showContactOptions($event)" aria-label="Contact User">
-          <md-tooltip>Contact {{ ul.selected.name }}</md-tooltip>
-          <md-icon md-svg-icon="share"></md-icon>
-        </md-button>
-      </md-content>
-
-  </div>
+  </md-content>
 
     <script src="./bower_components/angular/angular.js"></script>
     <script src="./bower_components/angular-animate/angular-animate.js"></script>
     <script src="./bower_components/angular-aria/angular-aria.js"></script>
     <script type="text/javascript" src="./bower_components/angular-material/angular-material.js"></script>
 
-    <script src="./src/users/Users.js"></script>
-    <script src="./src/users/UserController.js"></script>
-    <script src="./src/users/UserService.js"></script>
+    <script src="./src/HomePage.js"></script>
+    <script src="./src/controllers/HomePageController.js"></script>
+    <script src="./src/services/WorkExperienceService.js"></script>
 
     <script type="text/javascript">
 
           angular
-              .module('starterApp', ['ngMaterial', 'users'])
+              .module('starterApp', ['ngMaterial', 'homePage'])
               .config(function($mdThemingProvider, $mdIconProvider){
 
                   $mdIconProvider
@@ -92,7 +83,7 @@
                       .icon("phone"      , "./assets/svg/phone.svg"       , 512);
 
                       $mdThemingProvider.theme('default')
-                          .primaryPalette('brown')
+                          .primaryPalette('blue')
                           .accentPalette('red');
 
               });
