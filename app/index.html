@@ -38,6 +38,30 @@
         </md-tab>
         <md-tab label="Skills">
           <h2 class=".md-display-3">Skills</h2>
+          <div layout="row" layout-align="space-between start">
+            <div layout="column" layout-align="space-between center" flex>
+              <h3>Languages</h3>
+              <md-list flex>
+                <md-list-item ng-repeat="lang in ul.skills.languages" layout="column">
+                  <h4>{{lang.name}}</h4>
+                  <md-progress-linear md-mode="determinate" value="{{lang.skill}}"></md-progress-linear>
+                </md-list-item>
+              </md-list>
+
+              
+            </div>
+            <div layout="column" layout-align="space-between center" flex="40">
+              <h3>Libraries</h3>
+
+              <md-chips class="custom-chips" ng-model="ul.skills.libraries" readonly=true>
+                <md-chip-template>
+                  <span style='margin-left:15px'>
+                    <strong>{{$chip.name}}</strong>
+                  </span>
+                </md-chip-template>
+              </md-chips>
+            </div>
+          </div>
         </md-tab>
         <md-tab label="Work Experience">
           <md-content class="md-padding">
@@ -85,7 +109,7 @@
     <script src="./src/HomePage.js"></script>
     <script src="./src/controllers/HomePageController.js"></script>
     <script src="./src/services/WorkExperienceService.js"></script>
-    <script src="./src/services/BrowserService.js"></script>
+    <script src="./src/services/SkillsService.js"></script>
     <script src="./src/tweaks.js"></script>
 
     <script type="text/javascript">

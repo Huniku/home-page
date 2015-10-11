@@ -3,7 +3,7 @@
   angular
        .module('homePage')
        .controller('HomePageController', [
-          'workExperienceService', '$mdBottomSheet', '$log', '$q',
+          'workExperienceService', 'skillsService', '$mdBottomSheet', '$log', '$q',
           HomePageController
        ]);
 
@@ -13,9 +13,10 @@
    * @param avatarsService
    * @constructor
    */
-  function HomePageController( workExperienceService, $mdBottomSheet, $log, $q) {
+  function HomePageController( workExperienceService, skillsService, $mdBottomSheet, $log, $q) {
     var self = this;
     var workExp = [];
+    var skills = {};
     
     console.log("HomePageController");
     // Load all registered users
@@ -26,7 +27,13 @@
             self.workExp    = [].concat(work);
           });
 
-    
+    skillsService
+          .loadAllSkills()
+          .then( function ( skill ) {
+            self.skills = skill;
+            console.log(self.skills);
+          });
+
 
     /*self.browse = browserService.getBrowser();
     if(browse == "chrome") {
