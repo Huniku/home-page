@@ -26,30 +26,14 @@
             self.workExp    = [].concat(work);
           });
 
-    // *********************************
-    // Internal methods
-    // *********************************
+    
 
-    /**
-     * First hide the bottomsheet IF visible, then
-     * hide or Show the 'left' sideNav area
-     */
-    function toggleUsersList() {
-      var pending = $mdBottomSheet.hide() || $q.when(true);
-
-      pending.then(function(){
-        $mdSidenav('left').toggle();
-      });
-    }
-
-    /**
-     * Select the current avatars
-     * @param menuId
-     */
-    function selectUser ( user ) {
-      self.selected = angular.isNumber(user) ? $scope.users[user] : user;
-      self.toggleList();
-    }
+    /*self.browse = browserService.getBrowser();
+    if(browse == "chrome") {
+      self.workTimelineOffset = "37.05%";
+    } else {
+      self.workTimelineOffset = "37.05%";
+    }*/
 
     /**
      * Show the bottom sheet

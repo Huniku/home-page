@@ -16,12 +16,12 @@
     console.log("WorkExpLoaded");
     var experience = [
       {
-        company: "Walt Disney Parks and Resorts Online",
+        company: "Disney Parks and Resorts Technology",
         position: "Software Engineer",
         startDate: "Feb 2015",
         endDate: "Present",
-        icon: "svg-1",
-        hasNext: true,
+        icon: "assets/svg/dprdIcon.png",
+        lineHeight: '300px',
         description: [
           {text:"Designed and implemented the migration of confirmation emails to a new managed email service; involving the creation of new email templates, and integration with a new SOAP API."},
           {text:"Worked on the migration of Booking Service to new backend services including implementing freeze, thaw, book, and modify order functionality and integrating with the new data structures."},
@@ -29,12 +29,12 @@
         ]
       },
       {
-        company: "Walt Disney Parks and Resorts Online",
+        company: "Disney Parks and Resorts Technology",
         position: "Project Hire Software Engineer",
         startDate: "Jan 2014",
         endDate: "Feb 2015",
-        icon: "svg-2",
-        hasNext: true,
+        icon: "assets/svg/dprdIcon.png",
+        lineHeight: '250px',
         description: [
           {
             text:"Part of the on call rotation for Disneyland and Disneyworld checkout and reservation services."
@@ -45,12 +45,12 @@
         ]
       },
       {
-        company: "Walt Disney Parks and Resorts Online",
+        company: "Disney Parks and Resorts Technology",
         position: "Professional Intern",
         startDate: "May 2013",
         endDate: "Dec 2013",
-        icon: "svg-3",
-        hasNext: false,
+        icon: "assets/svg/dprdIcon.png",
+        lineHeight: '0px',
         description: [
           {text:"Developed an automation tool to capture full-page screenshots of websites in various states, and upload them to a central web app where they could be inspected, annotated and compared to screenshots from previous tests. Consulted with an attorney to file a patent application."}
         ]

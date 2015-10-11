@@ -31,33 +31,52 @@
       <h1>Ben White</h1>
     </md-toolbar>
 
-    <md-content flex id="content">
-      <md-list>
-        <md-list-item ng-repeat="itr in ul.workExp">
-          <md-whiteframe class="md-whiteframe-2dp" flex="20" layout="column" layout-align="left center" style="margin:30px; height:80px">
-            <span style="display: block; background-color: rgb(33, 150, 243); color:white; font-weight: 700; line-height: 36px; text-align: center;" flex="40">{{itr.startDate}} - {{itr.endDate}}</span>
-            <span style="display: block; font-size: 15px; font-weight: 500; line-height: 50px; text-align: center;" flex>{{itr.company}}</span>
-          </md-whiteframe>
-          <md-icon md-svg-icon="{{itr.icon}}" class="avatar"></md-icon>
-          <md-whiteframe class="md-whiteframe-2dp" flex="50" layout="column" layout-align="right center" style="margin:30px; padding: 16px 0;">
-            <h3 style="margin: 0 16px">{{itr.position}}</h3>
-            <ul style="margin:0;">
-              <md-list style="padding:0;">
-                <md-list-item ng-repeat="element in itr.description">
-                  <li>
-                    <span>{{element.text}}</span>
-                  </li>
-                </md-list-item>
-              </md-list>
-            </ul>
-          </md-whiteframe>
-          
-        </md-list-item>
-      </md-list
+    <md-content class="md-padding" id="content">
+      <md-tabs md-dynamic-height md-border-bottom>
+        <md-tab label="Summary">
+          <h2 class=".md-display-3">Summary</h2>
+        </md-tab>
+        <md-tab label="Skills">
+          <h2 class=".md-display-3">Skills</h2>
+        </md-tab>
+        <md-tab label="Work Experience">
+          <md-content class="md-padding">
+            <h2 class=".md-display-3">Work Experience</h2>
+            <md-list>
+              <md-list-item ng-repeat="itr in ul.workExp">
+                <div layout="row" layout-align="space-between start">
+                  <md-whiteframe class="md-whiteframe-2dp" layout="column" layout-align="left center" style="margin:30px;  width:300px;">
+                    <span style="display: block; background-color: rgb(33, 150, 243); color:white; font-weight: 700; line-height: 36px; text-align: center; width:100%;" flex="40">{{itr.startDate}} - {{itr.endDate}}</span>
+                    <span style="display: block; font-size: 15px; font-weight: 500; line-height: 50px; text-align: center; width:100%;" flex>{{itr.company}}</span>
+                  </md-whiteframe>
+                  <div ng-style='{"position": "relative"}'>
+                    <img src="{{itr.icon}}" class="avatar"></img>
+                    <div class="line" ng-style='{"height": "{{itr.lineHeight}}"}' ng-show="{{!$last}}" > </div>
+                  </div>
+                  <md-whiteframe class="md-whiteframe-2dp employmentDetail" flex="50" layout="column" layout-align="right center" style="margin:30px; padding: 16px 0;">
+                    
+                    <h3 style="margin: 0 16px">{{itr.position}}</h3>
+                    <div style="height:1px; width: 100%; background-color:#cccccc; margin: 16px 0"></div>
+                    <ul style="margin:0;">
+                      <md-list style="padding:0;">
+                        <md-list-item ng-repeat="element in itr.description">
+                          <li>
+                            <span class=".md-body-1">{{element.text}}</span>
+                          </li>
+                        </md-list-item>
+                      </md-list>
+                    </ul>
+                  </md-whiteframe>
+                </div>
+              </md-list-item>
+            </md-list>
+          </md-content>
+        </md-tab>
+      </md-tabs>
     </md-content>
 
   </md-content>
-
+    <script src="./bower_components/jquery/dist/jquery.min.js"></script>
     <script src="./bower_components/angular/angular.js"></script>
     <script src="./bower_components/angular-animate/angular-animate.js"></script>
     <script src="./bower_components/angular-aria/angular-aria.js"></script>
@@ -66,6 +85,8 @@
     <script src="./src/HomePage.js"></script>
     <script src="./src/controllers/HomePageController.js"></script>
     <script src="./src/services/WorkExperienceService.js"></script>
+    <script src="./src/services/BrowserService.js"></script>
+    <script src="./src/tweaks.js"></script>
 
     <script type="text/javascript">
 
