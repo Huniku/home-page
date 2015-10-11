@@ -17,11 +17,11 @@
       languages: [
         {
           name: "Java",
-          skill: 80
+          skill: 90
         },
         {
           name: "Javascript",
-          skill: 80
+          skill: 85
         },
         {
           name: "Python",
@@ -29,11 +29,11 @@
         },
         {
           name: "HTML",
-          skill: 80
+          skill: 60
         },
         {
           name: "CSS",
-          skill: 80
+          skill: 55
         }
       ],
       libraries: [

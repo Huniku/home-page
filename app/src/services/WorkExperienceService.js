@@ -20,7 +20,7 @@
         position: "Software Engineer",
         startDate: "Feb 2015",
         endDate: "Present",
-        icon: "assets/svg/dprdIcon.png",
+        icon: "assets/dprdIcon.png",
         lineHeight: '300px',
         description: [
           {text:"Designed and implemented the migration of confirmation emails to a new managed email service; involving the creation of new email templates, and integration with a new SOAP API."},
@@ -33,7 +33,7 @@
         position: "Project Hire Software Engineer",
         startDate: "Jan 2014",
         endDate: "Feb 2015",
-        icon: "assets/svg/dprdIcon.png",
+        icon: "assets/dprdIcon.png",
         lineHeight: '250px',
         description: [
           {
@@ -49,7 +49,7 @@
         position: "Professional Intern",
         startDate: "May 2013",
         endDate: "Dec 2013",
-        icon: "assets/svg/dprdIcon.png",
+        icon: "assets/dprdIcon.png",
         lineHeight: '0px',
         description: [
           {text:"Developed an automation tool to capture full-page screenshots of websites in various states, and upload them to a central web app where they could be inspected, annotated and compared to screenshots from previous tests. Consulted with an attorney to file a patent application."}

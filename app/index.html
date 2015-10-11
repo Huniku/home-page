@@ -34,34 +34,36 @@
     <md-content class="md-padding" id="content">
       <md-tabs md-dynamic-height md-border-bottom>
         <md-tab label="Summary">
-          <h2 class=".md-display-3">Summary</h2>
+          <md-content class="md-padding">
+            <h2 class=".md-display-3">Summary</h2>
+          </md-content>
         </md-tab>
         <md-tab label="Skills">
-          <h2 class=".md-display-3">Skills</h2>
-          <div layout="row" layout-align="space-between start">
-            <div layout="column" layout-align="space-between center" flex>
-              <h3>Languages</h3>
-              <md-list flex>
-                <md-list-item ng-repeat="lang in ul.skills.languages" layout="column">
-                  <h4>{{lang.name}}</h4>
-                  <md-progress-linear md-mode="determinate" value="{{lang.skill}}"></md-progress-linear>
-                </md-list-item>
-              </md-list>
-
-              
+          <md-content class="md-padding">
+            <h2 class=".md-display-3">Skills</h2>
+            <div layout="row" layout-align="space-between start" flex>
+              <div layout="column" layout-align="space-between  start" flex>
+                <h2 style="margin-bottom: 8px;">Languages</h2>
+                <md-list flex="80" style="padding:0;">
+                  <md-list-item ng-repeat="lang in ul.skills.languages" layout="column" layout-align="space-around start" flex style="padding:0;">
+                    <h3>{{lang.name}}</h4>
+                    <md-progress-linear md-mode="determinate" value="{{lang.skill}}" ng-style={"width":"{{ul.winWidth*0.37}}"}></md-progress-linear flex>
+                  </md-list-item>
+                </md-list>
+              </div>
+              <div class="line" style="top:150px; height:40%;"></div>
+              <div layout="column" layout-align="space-between start" flex="40">
+                <h2>Libraries</h2>
+                <md-chips class="custom-chips" ng-model="ul.skills.libraries" readonly=true >
+                  <md-chip-template>
+                    <span style='margin-left:15px'>
+                      {{$chip.name}}
+                    </span>
+                  </md-chip-template>
+                </md-chips>
+              </div>
             </div>
-            <div layout="column" layout-align="space-between center" flex="40">
-              <h3>Libraries</h3>
-
-              <md-chips class="custom-chips" ng-model="ul.skills.libraries" readonly=true>
-                <md-chip-template>
-                  <span style='margin-left:15px'>
-                    <strong>{{$chip.name}}</strong>
-                  </span>
-                </md-chip-template>
-              </md-chips>
-            </div>
-          </div>
+          </md-content>
         </md-tab>
         <md-tab label="Work Experience">
           <md-content class="md-padding">
@@ -75,7 +77,7 @@
                   </md-whiteframe>
                   <div ng-style='{"position": "relative"}'>
                     <img src="{{itr.icon}}" class="avatar"></img>
-                    <div class="line" ng-style='{"height": "{{itr.lineHeight}}"}' ng-show="{{!$last}}" > </div>
+                    <div class="line dashed" ng-style='{"height": "{{itr.lineHeight}}"}' ng-show="{{!$last}}" > </div>
                   </div>
                   <md-whiteframe class="md-whiteframe-2dp employmentDetail" flex="50" layout="column" layout-align="right center" style="margin:30px; padding: 16px 0;">
                     
