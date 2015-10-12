@@ -130,11 +130,17 @@
     </md-content>
 
   </md-content>
-    <script src="./bower_components/jquery/dist/jquery.min.js"></script>
-    <script src="./bower_components/angular/angular.js"></script>
-    <script src="./bower_components/angular-animate/angular-animate.js"></script>
-    <script src="./bower_components/angular-aria/angular-aria.js"></script>
-    <script type="text/javascript" src="./bower_components/angular-material/angular-material.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script>
+      if (!window.jQuery) { document.write('<script src="./bower_components/jquery/dist/jquery.min.js"><\/script>'); }
+    </script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular.min.js"></script>
+    <script>
+      if (!window.angular) { document.write('<script src="./bower_components/angular/angular.js"><\/script>'); }
+    </script>
+    <script src="./bower_components/angular-animate/angular-animate.min.js"></script>
+    <script src="./bower_components/angular-aria/angular-aria.min.js"></script>
+    <script type="text/javascript" src="./bower_components/angular-material/angular-material.min.js"></script>
 
     <script src="./src/HomePage.js"></script>
     <script src="./src/controllers/HomePageController.js"></script>
