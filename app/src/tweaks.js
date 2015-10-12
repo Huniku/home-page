@@ -1,14 +1,23 @@
 $(function() {
 
-    var ref = $('.avatar:first');
-    ref.bind("reposition", reposition);
-
-    function reposition() {
-        $('.line').each(function(index, value) {
-            console.log(value);
-            console.log(ref.position()['left'], ref.css('width')/2);
-            $(value).css({left: ref.position()['left']});
-        }); 
+    var profileImg = $("#profileImg");
+    var download = new Image();
+    var swapImages = function() {
+        console.log("swap");
+        profileImg.get(0).src = "assets/portrait.jpg";
     }
-    //reposition();
+
+    download.onload = swapImages;
+    //Begin loading of the image
+    console.log("start dld");
+    download.src = "assets/portrait.jpg";
+
+    //If the images is already loaded (i.e. it was in the local cache)
+    //img.onload will not fire
+    if(download.width != 0) {
+        console.log("cached")
+        swapImages();
+    }
+
+    
 });
