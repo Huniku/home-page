@@ -52,7 +52,9 @@
         icon: "assets/dprdIcon.png",
         lineHeight: '0px',
         description: [
-          {text:"Developed an automation tool to capture full-page screenshots of websites in various states, and upload them to a central web app where they could be inspected, annotated and compared to screenshots from previous tests. Consulted with an attorney to file a patent application."}
+          {text:"Developed an automation tool to capture full-page screenshots of websites in various states, and upload them to a central web app where they could be inspected, annotated and compared to screenshots from previous tests."},
+          {text:"The app was built using Node.js, Express,js, Twitter Bootstrap, Raphael.js and jQuery."},
+          {text:"Disney is applying for a patent for this project, where I am listed as the Lead Inventor."}
         ]
       }
     ];
