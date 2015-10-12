@@ -34,7 +34,7 @@
         startDate: "Jan 2014",
         endDate: "Feb 2015",
         icon: "assets/dprdIcon.png",
-        lineHeight: '250px',
+        lineHeight: '270px',
         description: [
           {
             text:"Part of the on call rotation for Disneyland and Disneyworld checkout and reservation services."
