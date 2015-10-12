@@ -144,3 +144,15 @@ span.name {
 .dashed {
   border-left: 2px dashed #4d4d4d;
 }
+
+.tabHeading {
+  margin: 16px 0;
+}
+
+.zeroMargin {
+  margin: 0;
+}
+
+.allCaps {
+  text-transform: uppercase;
+}

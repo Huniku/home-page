@@ -35,12 +35,31 @@
       <md-tabs md-dynamic-height md-border-bottom>
         <md-tab label="Summary">
           <md-content class="md-padding">
-            <h2 class=".md-display-3">Summary</h2>
+            <h3 class="md-display-2 tabHeading">Summary</h3>
+            <md-content layout="row" flex>
+              <md-content layout="column" layout-align="start start" flex="65">
+                <md-content layout="row" layout-align="space-between center">
+                  <h6 class="md-subhead zeroMargin"><b>Name:</b>  Ben White</h6>
+                </md-content>
+                <md-content layout="row" layout-align="space-between center">
+                  <h6 class="md-subhead zeroMargin"><b>Email:</b>  benjamtw@gmail.com</h6>
+                </md-content>
+                <md-content layout="row" layout-align="space-between start">
+                  <h6 class="md-subhead zeroMargin"><b>Current Employer:</b> {{ul.workExp[0].company}}</h6>
+                </md-content>
+                <md-content layout="row" layout-align="space-between center">
+                  <h6 class="md-subhead zeroMargin"><b>Current Position:</b>  {{ul.workExp[0].position}}</h6>
+                </md-content>
+              </md-content>
+              <md-content layout="column" layout-align="start center">
+                <img src="/assets/portrait.jpg" style="width:50%;">
+              </md-content>
+            </md-content>
           </md-content>
         </md-tab>
         <md-tab label="Skills">
           <md-content class="md-padding">
-            <h2 class=".md-display-3">Skills</h2>
+            <h3 class="md-display-2 tabHeading">Skills</h3>
             <div layout="row" layout-align="space-between start" flex>
               <div layout="column" layout-align="space-between  start" flex>
                 <h2 style="margin-bottom: 8px;">Languages</h2>
@@ -67,7 +86,7 @@
         </md-tab>
         <md-tab label="Work Experience">
           <md-content class="md-padding">
-            <h2 class=".md-display-3">Work Experience</h2>
+            <h3 class="md-display-2 tabHeading">Work Experience</h3>
             <md-list>
               <md-list-item ng-repeat="itr in ul.workExp">
                 <div layout="row" layout-align="space-between start">
@@ -83,11 +102,11 @@
                     
                     <h3 style="margin: 0 16px">{{itr.position}}</h3>
                     <div style="height:1px; width: 100%; background-color:#cccccc; margin: 16px 0"></div>
-                    <ul style="margin:0;">
+                    <ul class="zeroMargin">
                       <md-list style="padding:0;">
                         <md-list-item ng-repeat="element in itr.description">
                           <li>
-                            <span class=".md-body-1">{{element.text}}</span>
+                            <span class="md-body-1">{{element.text}}</span>
                           </li>
                         </md-list-item>
                       </md-list>
