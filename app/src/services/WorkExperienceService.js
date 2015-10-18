@@ -13,7 +13,6 @@
    * @constructor
    */
   function WorkExperienceService($q){
-    console.log("WorkExpLoaded");
     var experience = [
       {
         company: "Disney Parks and Resorts Technology",
@@ -62,7 +61,6 @@
     // Promise-based API
     return {
       loadAllWorkExperience : function() {
-        console.log("WorkExp loader run");
         // Simulate async nature of real remote calls
         return $q.when(experience);
       }

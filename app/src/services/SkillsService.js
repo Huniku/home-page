@@ -61,7 +61,6 @@
     // Promise-based API
     return {
       loadAllSkills : function() {
-        console.log("WorkExp loader run");
         // Simulate async nature of real remote calls
         return $q.when(skills);
       }
