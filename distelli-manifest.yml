@@ -14,7 +14,7 @@ huniku/h:
 
   #The PreInstall section occurs before install: distel.li/preinstallsection
   PreInstall:
-    #- npm install -g bower
+    - npm install -g bower
     #- npm install -g npm-windows-upgrade
     #- powershell -ExecutionPolicy Unrestricted -Command "npm-windows-upgrade --version:3.3.9 --no-prompt"
     #- echo "Begin PreInstall"
