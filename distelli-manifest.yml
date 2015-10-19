@@ -22,7 +22,8 @@ huniku/h:
     #- sudo tar -C /usr/local --strip-components 1 -zxvf node-v0.12.2-linux-x64.tar.gz
 
   #The PostInstall section occurs after install: http://distel.li/postinstallsection
-  #PostInstall:
+  PostInstall:
+    - bower update
     #- echo "Begin PostInstall"
 
   #The Exec section executes and monitors the application: distel.li/execsection

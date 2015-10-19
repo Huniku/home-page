@@ -18,7 +18,6 @@
     "morgan":"*"
   },
   "scripts": {
-    "postinstall": "bower update",
     "prestart": "npm update",
     "start": "forever -w homePage.js",
     "test": "protractor ./e2e/protractor.conf.js"
