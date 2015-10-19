@@ -1,6 +1,4 @@
 huniku/home-page2:
-  Env:
-    - NODE_ENV: "production"
 
   #The PkgInclude is to identify files that must be included in the application deployment: http://distel.li/pkgincludesection
   PkgInclude:
@@ -15,8 +13,8 @@ huniku/home-page2:
   #The PreInstall section occurs before install: distel.li/preinstallsection
   PreInstall:
     - echo "Begin PreInstall"
-    #- wget http://nodejs.org/dist/v0.12.2/node-v0.12.2-linux-x64.tar.gz
-    #- sudo tar -C /usr/local --strip-components 1 -zxvf node-v0.12.2-linux-x64.tar.gz
+    - wget http://nodejs.org/dist/v0.12.2/node-v0.12.2-linux-x64.tar.gz
+    - sudo tar -C /usr/local --strip-components 1 -zxvf node-v0.12.2-linux-x64.tar.gz
 
   #The PostInstall section occurs after install: http://distel.li/postinstallsection
   PostInstall:
