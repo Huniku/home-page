@@ -27,4 +27,4 @@ huniku/home-page2:
 
   #The Exec section executes and monitors the application: distel.li/execsection
   Exec:
-    - node start
+    - node homePage.js
