@@ -1,4 +1,4 @@
-huniku/h:
+huniku/home-page2:
   Env:
     - NODE_ENV: "production"
 
@@ -8,23 +8,22 @@ huniku/h:
 
   #The Build section is for specifying build and pre-packaging steps: http://distel.li/buildsection
   Build:
-    #- echo "Begin Build"
-    - npm install
+    - echo "Begin Build"
+    #- npm install
     #- npm test
 
   #The PreInstall section occurs before install: distel.li/preinstallsection
   PreInstall:
-    - npm install -g bower
-    #- npm install -g npm-windows-upgrade
-    #- powershell -ExecutionPolicy Unrestricted -Command "npm-windows-upgrade --version:3.3.9 --no-prompt"
-    #- echo "Begin PreInstall"
+    - echo "Begin PreInstall"
     #- wget http://nodejs.org/dist/v0.12.2/node-v0.12.2-linux-x64.tar.gz
     #- sudo tar -C /usr/local --strip-components 1 -zxvf node-v0.12.2-linux-x64.tar.gz
 
   #The PostInstall section occurs after install: http://distel.li/postinstallsection
   PostInstall:
+    - echo "Begin PostInstall"
+    - npm install -g bower
     - bower update
-    #- echo "Begin PostInstall"
+    - npm install
 
   #The Exec section executes and monitors the application: distel.li/execsection
   Exec:
