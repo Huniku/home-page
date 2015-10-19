@@ -13,16 +13,16 @@ huniku/home-page2:
   #The PreInstall section occurs before install: distel.li/preinstallsection
   PreInstall:
     - echo "Begin PreInstall"
-    - wget http://nodejs.org/dist/v0.12.2/node-v0.12.2-linux-x64.tar.gz
-    - sudo tar -C /usr/local --strip-components 1 -zxvf node-v0.12.2-linux-x64.tar.gz
+    #- wget http://nodejs.org/dist/v0.12.2/node-v0.12.2-linux-x64.tar.gz
+    #- sudo tar -C /usr/local --strip-components 1 -zxvf node-v0.12.2-linux-x64.tar.gz
 
   #The PostInstall section occurs after install: http://distel.li/postinstallsection
   PostInstall:
     - echo "Begin PostInstall"
     - npm install -g bower
     - bower update
-    - npm install
 
   #The Exec section executes and monitors the application: distel.li/execsection
   Exec:
+    - npm install
     - node homePage.js
