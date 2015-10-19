@@ -21,8 +21,8 @@ huniku/home-page2:
     - echo "Begin PostInstall"
     - npm install -g bower
     - bower update
+    - npm update
 
   #The Exec section executes and monitors the application: distel.li/execsection
   Exec:
-    - npm install
     - node homePage.js
