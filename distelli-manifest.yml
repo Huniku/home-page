@@ -20,7 +20,7 @@ huniku/home-page:
   PostInstall:
     - echo "Begin PostInstall"
     - npm update
-    - npm install -g bower
+    - sudo npm install -g bower
     - bower update
 
   #The Exec section executes and monitors the application: distel.li/execsection
