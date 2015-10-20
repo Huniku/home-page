@@ -21,7 +21,8 @@ huniku/home-page:
     - echo "Begin PostInstall"
     - npm update
     - sudo npm install -g bower
-    - bower update
+    - echo "bower should be installed"
+    - f:\"Program Files"\nodejs\node.exe f:\"Program Files"\nodejs\node_modules\bower\bin\bower udpate
 
   #The Exec section executes and monitors the application: distel.li/execsection
   Exec:
