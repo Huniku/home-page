@@ -1,4 +1,4 @@
-huniku/home-page2:
+huniku/home-page:
 
   #The PkgInclude is to identify files that must be included in the application deployment: http://distel.li/pkgincludesection
   PkgInclude:
