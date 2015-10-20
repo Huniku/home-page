@@ -5,6 +5,9 @@
   "description": "A starter project for AngularJS Material",
   "repository": "https://github.com/angular/material-start",
   "license": "MIT",
+  "devDependencies": {
+    "bower":"*"
+  },
   "dependencies": {
     "express":"4.x",
     "morgan":"*"
