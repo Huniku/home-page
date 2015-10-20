@@ -22,7 +22,7 @@ huniku/home-page:
     |
       echo "Begin PostInstall"
       npm update
-      node node_modules/bower/bin/bower update
+      node_modules/bower/bin/bower update
 
   #The Exec section executes and monitors the application: distel.li/execsection
   Exec:
