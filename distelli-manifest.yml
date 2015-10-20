@@ -19,9 +19,9 @@ huniku/home-page:
   #The PostInstall section occurs after install: http://distel.li/postinstallsection
   PostInstall:
     - echo "Begin PostInstall"
+    - npm update
     - npm install -g bower
     - bower update
-    - npm update
 
   #The Exec section executes and monitors the application: distel.li/execsection
   Exec:
