@@ -18,11 +18,13 @@ huniku/home-page:
 
   #The PostInstall section occurs after install: http://distel.li/postinstallsection
   PostInstall:
-    - echo "Begin PostInstall"
-    - npm update
-    - sudo npm install -g bower
-    - echo "bower should be installed"
-    - f:\"Program Files"\nodejs\node.exe f:\"Program Files"\nodejs\node_modules\bower\bin\bower udpate
+    - 
+    |
+      echo "Begin PostInstall"
+      npm update
+      sudo npm install -g bower
+      echo "bower should be installed"
+      bower update
 
   #The Exec section executes and monitors the application: distel.li/execsection
   Exec:
