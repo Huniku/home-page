@@ -1,9 +1,9 @@
 {
-  "name": "material-start",
+  "name": "home-page",
   "private": true,
   "version": "0.0.3",
   "description": "A starter project for AngularJS Material",
-  "repository": "https://github.com/angular/material-start",
+  "repository": "https://github.com/Huniku/home-page",
   "license": "MIT",
   "devDependencies": {
     "karma": "~0.10",
@@ -16,11 +16,13 @@
   },
   "dependencies": {
     "express":"4.x",
-    "morgan":"*"
+    "morgan":"*",
+    "bower":"*"
   },
   "scripts": {
     "postinstall": "bower update",
     "prestart": "npm update",
+    "start": "forever -w homePage.js",
     "test": "protractor ./e2e/protractor.conf.js"
   }
 }
