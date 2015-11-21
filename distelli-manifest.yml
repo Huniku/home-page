@@ -1,4 +1,4 @@
-huniku/home-page2:
+huniku/home-page:
 
   #The PkgInclude is to identify files that must be included in the application deployment: http://distel.li/pkgincludesection
   PkgInclude:
@@ -18,10 +18,11 @@ huniku/home-page2:
 
   #The PostInstall section occurs after install: http://distel.li/postinstallsection
   PostInstall:
-    - echo "Begin PostInstall"
-    - npm install -g bower
-    - bower update
-    - npm update
+    - 
+    |
+      echo "Begin PostInstall"
+      npm update
+      node_modules/bower/bin/bower update
 
   #The Exec section executes and monitors the application: distel.li/execsection
   Exec:
